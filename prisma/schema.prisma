@@ -9,3 +9,9 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Lamp {
+  id     Int      @id @default(autoincrement())
+  status Boolean
+  time   DateTime @default(now())
+}
